@@ -44,6 +44,8 @@ $gutter-compensation: $half-gutter-width * -1;
         }
 
         > .column.-#{$name} {
+            flex: 1 0 0;
+
             &-first { order: -1; }
             &-last { order: 1; }
 
@@ -96,7 +98,7 @@ $gutter-compensation: $half-gutter-width * -1;
 
     > .column {
         box-sizing: border-box;
-        flex: 1 0 0;
+        flex: 0 0 auto;
         max-width: 100%;
         padding-left: $half-gutter-width;
         padding-right: $half-gutter-width;
