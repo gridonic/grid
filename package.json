@@ -1,0 +1,39 @@
+{
+  "name": "@gridonic/grid",
+  "version": "0.1.0",
+  "description": "Simple CSS grid based on the Flexible Box Module (Flexbox) written in Sass.",
+  "main": "grid.scss",
+  "scripts": {
+    "build": "node-sass grid.scss -o dist",
+    "postbuild": "npm run postcss",
+    "postcss": "postcss dist/*.css --replace",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gridonic/grid.git"
+  },
+  "keywords": [
+    "css",
+    "flexbox",
+    "grid",
+    "gridonic",
+    "rscss",
+    "sass"
+  ],
+  "author": "Gridonic <hello@gridonic.ch>",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gridonic/grid/issues"
+  },
+  "homepage": "https://github.com/gridonic/grid",
+  "devDependencies": {
+    "autoprefixer": "^8.6.5",
+    "cssnano": "^4.0.0",
+    "node-sass": "^4.9.1",
+    "postcss-cli": "^5.0.1"
+  },
+  "dependencies": {},
+  "browserslist": "last 2 versions"
+}
