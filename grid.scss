@@ -111,7 +111,7 @@ $gutter-compensation: $half-gutter-width * -1;
 
 @each $name, $size in map-merge((xs: null), $grid-breakpoints) {
     @if $size {
-        @media only screen and (min-width: $size) {
+        @media (min-width: $size) {
             @include grid-breakpoint($name, $size)
         }
     } @else {
