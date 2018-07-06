@@ -1,6 +1,6 @@
 # The Grid
 
-A CSS Grid based on the [`flex`] display property and written entirely in [Sass] respecting the [rscss] specification.
+A CSS Grid based on the [`flex`] display property written entirely in [Sass] respecting the [rscss] system.
 
 # Install
 
