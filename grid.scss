@@ -34,9 +34,9 @@ $gutter-compensation: $half-gutter-width * -1;
 
     .#{$grid-classes-prefix}row {
         &.-#{$name} {
-            &-start { justify-content: flex-start; }
+            &-start, &-left { justify-content: flex-start; }
             &-center { justify-content: center; }
-            &-end { justify-content: flex-end; }
+            &-end, &-right { justify-content: flex-end; }
             &-top { align-items: flex-start; }
             &-middle { align-items: center; }
             &-bottom { align-items: flex-end; }
