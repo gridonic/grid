@@ -9,6 +9,7 @@ $grid-outer-margin: 2rem !default;
 
 // Set the breakpoints for the grid.
 $grid-breakpoints: (
+    xs: null,
     sm: 576px,
     md: 768px,
     lg: 992px,
@@ -109,7 +110,7 @@ $gutter-compensation: $half-gutter-width * -1;
     }
 }
 
-@each $name, $size in map-merge((xs: null), $grid-breakpoints) {
+@each $name, $size in $grid-breakpoints {
     @if $size {
         @media (min-width: $size) {
             @include grid-breakpoint($name, $size)
