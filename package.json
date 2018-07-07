@@ -1,6 +1,6 @@
 {
   "name": "@gridonic/grid",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A CSS Grid based on the flex display property written entirely in Sass respecting the rscss system.",
   "main": "grid.scss",
   "scripts": {

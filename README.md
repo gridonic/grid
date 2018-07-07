@@ -50,6 +50,7 @@ $grid-outer-margin: 2rem;
 
 // Set the breakpoints for the grid.
 $grid-breakpoints: (
+    xs: null,
     sm: 576px,
     md: 768px,
     lg: 992px,
