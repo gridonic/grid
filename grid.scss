@@ -75,7 +75,7 @@ $gutter-compensation: $half-gutter-width * -1;
     width: 100%;
 
     @if $grid-max-width {
-        &:not(.-fluid) {
+        &:not(.-no-limit) {
             max-width: $grid-max-width;
         }
     }
