@@ -79,7 +79,7 @@ $gutter-compensation: $half-gutter-width * -1;
         }
     }
 
-    &:not(.-no-padding) {
+    &:not(.-no-outer) {
         padding-left: $grid-outer-margin;
         padding-right: $grid-outer-margin;
     }
