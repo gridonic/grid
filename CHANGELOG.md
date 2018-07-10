@@ -1,3 +1,21 @@
+Anything [unreleased] yet?
+
+<br>
+
+# [0.3.0]
+###### 2018-07-10
+
+It’s all about containers. 🚚
+
+###### Changed
+- Rename `-no-padding` to `-no-outer` to avoid misconceptions ([6f9f9e0])
+- Rename `-fluid` to `-no-limit` for consistency reasons ([6c6bda8])
+- Container should always stretch ([5d3f578])
+
+###### Added
+- Add responsive `-{…}-fix` modifiers for enabling fixed widths ([3b968ca])
+
+
 # [0.2.0]
 ###### 2018-07-07
 
@@ -11,15 +29,22 @@
 ###### Added
 - Aliases for `-start` (`-left`) and `-end` (`-right`) ([c3aa196])
 
-# [0.1.0]
+
+# 0.1.0
 ###### 2018-07-06
 
 First (un)official silent release! 😎
 
-[0.2.0]: https://github.com/gridonic/grid/compare/0.2.0...HEAD
-[0.1.0]: https://github.com/gridonic/grid/compare/0.1.0...0.2.0
+
+[unreleased]: https://github.com/gridonic/grid/compare/0.3.0...HEAD
+[0.3.0]: https://github.com/gridonic/grid/compare/0.2.0...0.3.0
+[0.2.0]: https://github.com/gridonic/grid/compare/0.1.0...0.2.0
 
 [e370bed]: https://github.com/gridonic/grid/commit/e370bed
 [dd7caef]: https://github.com/gridonic/grid/commit/dd7caef
 [397dff5]: https://github.com/gridonic/grid/commit/397dff5
 [c3aa196]: https://github.com/gridonic/grid/commit/c3aa196
+[6f9f9e0]: https://github.com/gridonic/grid/commit/6f9f9e0
+[6c6bda8]: https://github.com/gridonic/grid/commit/6c6bda8
+[5d3f578]: https://github.com/gridonic/grid/commit/5d3f578
+[3b968ca]: https://github.com/gridonic/grid/commit/3b968ca
