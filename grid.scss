@@ -72,6 +72,7 @@ $gutter-compensation: $half-gutter-width * -1;
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
 
     @if $grid-max-width {
         &:not(.-fluid) {
