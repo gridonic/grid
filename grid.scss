@@ -28,7 +28,9 @@ $gutter-compensation: $half-gutter-width * -1;
 @mixin grid-breakpoint($name, $size) {
     @if $size {
         .#{$grid-classes-prefix}container {
-            width: $size;
+            &.-#{$name}-fix {
+                width: $size;
+            }
         }
     }
 
