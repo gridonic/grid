@@ -1,0 +1,23 @@
+// Set the number of columns you want to use on your layout.
+$grid-columns: 12 !default;
+
+// Set the gutter size between columns.
+$grid-gutter-width: 30px !default;
+
+// Set a margin for the container sides.
+$grid-outer-margin: 15px !default;
+
+// Set the breakpoints for the grid.
+$grid-breakpoints: (
+        xs: null,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+
+// Set the maximum width for the container.
+$grid-max-width: 1440px !default;
+
+// Set the prefix for all grid related classes.
+$grid-classes-prefix: "grid-" !default;

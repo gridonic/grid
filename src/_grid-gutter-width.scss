@@ -1,0 +1,20 @@
+@mixin grid-gutter-width($name: null) {
+    $gutter-width: grid-gutter-width($name);
+    $is-gutter-width-responsive: type-of($grid-gutter-width) != "number";
+
+    $is-always: $name == null and $is-gutter-width-responsive == false;
+    $is-responsive: $name and $is-gutter-width-responsive == true;
+
+    @if ($is-always or $is-responsive) and $gutter-width {
+        $half-gutter-width: $gutter-width / 2;
+        $gutter-compensation: $half-gutter-width * -1;
+
+        margin-left: $gutter-compensation;
+        margin-right: $gutter-compensation;
+
+        > .column {
+            padding-left: $half-gutter-width;
+            padding-right: $half-gutter-width;
+        }
+    }
+}

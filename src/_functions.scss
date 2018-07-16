@@ -1,0 +1,51 @@
+/// Some of the grid configurations can be sets of values for responsive
+/// reasons. Therefore we need a function that returns either the appropriate
+/// value at a given breakpoint, or the same value for every call.
+///
+/// @author Gridonic
+/// @param {String} $breakpoint - Breakpoint to get value for.
+/// @param {List|Number} $option - Option to look for specific value.
+/// @param {Map} $breakpoints - Map of available breakpoints.
+/// @return {Number|null}
+@function grid-configuration-at($breakpoint, $option, $breakpoints) {
+
+    // The given option is not a list or map, return it.
+    @if index(list map, type-of($option)) == null {
+        @return $option;
+    }
+
+    // Try to get the index of the requested breakpoint within the breakpoints map.
+    $index: index(map-keys($grid-breakpoints), $breakpoint);
+
+    // No breakpoint found.
+    @if $index == null {
+        @return nth($option, 1);
+    }
+
+    // If index is still within the range of the outer margin list,
+    // return the requested value, otherwise null.
+    @return if($index <= length($option), nth($option, $index), null);
+}
+
+/// Returns the total width for a given column.
+@function grid-column-width($i) {
+    @return 100% / $grid-columns * $i;
+}
+
+/// Returns the appropriate outer margin for a given or not given breakpoint.
+@function grid-outer-margin($name: null) {
+    @return grid-configuration-at(
+        $name,
+        $grid-outer-margin,
+        $grid-breakpoints
+    );
+}
+
+/// Returns the appropriate gutter width for a given or not given breakpoint.
+@function grid-gutter-width($name: null) {
+    @return grid-configuration-at(
+        $name,
+        $grid-gutter-width,
+        $grid-breakpoints
+    );
+}

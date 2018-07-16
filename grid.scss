@@ -1,102 +1,41 @@
 /*! {{ name }} v{{ version }} */
 
-// Set the number of columns you want to use on your layout.
-$grid-columns: 12 !default;
-
-// Set the gutter size between columns.
-$grid-gutter-width: 1rem !default;
-
-// Set a margin for the container sides.
-$grid-outer-margin: 2rem !default;
-
-// Set the breakpoints for the grid.
-$grid-breakpoints: (
-    xs: null,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px
-) !default;
-
-// Set the maximum width for the container.
-$grid-max-width: 1440px !default;
-
-// Set the prefix for all grid related classes.
-$grid-classes-prefix: "grid-" !default;
-
-$half-gutter-width: $grid-gutter-width / 2;
-$gutter-compensation: $half-gutter-width * -1;
-
-@mixin grid-breakpoint($name, $size) {
-    @if $size {
-        .#{$grid-classes-prefix}container {
-            &.-#{$name}-fix {
-                width: $size;
-            }
-        }
-    }
-
-    .#{$grid-classes-prefix}row {
-        &.-#{$name} {
-            &-start, &-left { justify-content: flex-start; }
-            &-center { justify-content: center; }
-            &-end, &-right { justify-content: flex-end; }
-            &-top { align-items: flex-start; }
-            &-middle { align-items: center; }
-            &-bottom { align-items: flex-end; }
-            &-around { justify-content: space-around; }
-            &-between { justify-content: space-between; }
-        }
-
-        > .column.-#{$name} {
-            flex: 1 0 0;
-
-            &-first { order: -1; }
-            &-last { order: 1; }
-
-            @for $i from 1 through $grid-columns {
-                $width: 100% / $grid-columns * $i;
-
-                &-#{$i} {
-                    flex-basis: $width;
-                    max-width: $width;
-                }
-            }
-
-            @for $i from 0 through $grid-columns {
-                &-offset-#{$i} {
-                    margin-left: if($i == 0, 0, 100% / $grid-columns * $i);
-                }
-            }
-        }
-    }
-}
+// Import grid functions/mixins.
+@import "src/functions";
+@import "src/variables";
+@import "src/grid-breakpoint";
+@import "src/grid-gutter-width";
+@import "src/grid-outer-margin";
 
 .#{$grid-classes-prefix}container {
+    @include grid-outer-margin;
+
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
 
     @if $grid-max-width {
-        &:not(.-no-limit) {
-            max-width: $grid-max-width;
+        max-width: $grid-max-width;
+
+        &.-no-limit {
+            max-width: none;
         }
     }
 
-    &:not(.-no-outer) {
-        padding-left: $grid-outer-margin;
-        padding-right: $grid-outer-margin;
+    &.-no-outer {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
 .#{$grid-classes-prefix}row {
+    @include grid-gutter-width;
+
     box-sizing: border-box;
     display: flex;
     flex: 0 1 auto;
     flex-flow: row wrap;
-    margin-left: $gutter-compensation;
-    margin-right: $gutter-compensation;
 
     &.-reverse {
         flex-direction: row-reverse;
@@ -106,8 +45,6 @@ $gutter-compensation: $half-gutter-width * -1;
         box-sizing: border-box;
         flex: 0 0 auto;
         max-width: 100%;
-        padding-left: $half-gutter-width;
-        padding-right: $half-gutter-width;
 
         &.-reverse {
             flex-direction: column-reverse;

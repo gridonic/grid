@@ -1,0 +1,12 @@
+@mixin grid-outer-margin($name: null) {
+    $outer-margin: grid-outer-margin($name);
+    $is-outer-margin-responsive: type-of($grid-outer-margin) != "number";
+
+    $is-always: $name == null and $is-outer-margin-responsive == false;
+    $is-responsive: $name and $is-outer-margin-responsive == true;
+
+    @if ($is-always or $is-responsive) and $outer-margin {
+        padding-left: $outer-margin;
+        padding-right: $outer-margin;
+    }
+}

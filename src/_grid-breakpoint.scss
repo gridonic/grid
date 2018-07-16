@@ -1,0 +1,48 @@
+@mixin grid-breakpoint($name, $size) {
+    .#{$grid-classes-prefix}container {
+        @include grid-outer-margin($name);
+
+        @if $size {
+            &.-#{$name}-fix {
+                width: $size;
+            }
+        }
+    }
+
+    .#{$grid-classes-prefix}row {
+        @include grid-gutter-width($name);
+
+        &.-#{$name} {
+            &-start, &-left { justify-content: flex-start; }
+            &-center { justify-content: center; }
+            &-end, &-right { justify-content: flex-end; }
+            &-top { align-items: flex-start; }
+            &-middle { align-items: center; }
+            &-bottom { align-items: flex-end; }
+            &-around { justify-content: space-around; }
+            &-between { justify-content: space-between; }
+        }
+
+        > .column.-#{$name} {
+            flex: 1 0 0;
+
+            &-first { order: -1; }
+            &-last { order: 1; }
+
+            @for $i from 1 through $grid-columns {
+                $width: grid-column-width($i);
+
+                &-#{$i} {
+                    flex-basis: $width;
+                    max-width: $width;
+                }
+            }
+
+            @for $i from 0 to $grid-columns {
+                &-offset-#{$i} {
+                    margin-left: grid-column-width($i);
+                }
+            }
+        }
+    }
+}
