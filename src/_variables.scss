@@ -16,11 +16,11 @@ $grid-outer-margin: 15px !default;
 // least one breakpoint without a resolution. This one will be used for
 // naming of the initial classes.
 $grid-breakpoints: (
-        xs: null,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px
+    xs: null,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
 ) !default;
 
 // Set the maximum width for the container. There is a class
