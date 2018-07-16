@@ -40,18 +40,18 @@ Below you see the default configuration values.
 
 ```scss
 // Set the number of columns you want to use in your layout.
-$grid-columns: 12 !default;
+$grid-columns: 12;
 
 // Set the gutter size between columns. You may provide a list of
 // values for each breakpoint.
 //
 // If there are more breakpoints than values in your list, the last
 // value will be used for all remaining breakpoints.
-$grid-gutter-width: 30px !default;
+$grid-gutter-width: 30px;
 
 // Set a margin for the container sides. This may also be a list of
 // values. See gutter width for explanation.
-$grid-outer-margin: 15px !default;
+$grid-outer-margin: 15px;
 
 // Set the breakpoints for the grid. You should always provide at
 // least one breakpoint without a resolution. This one will be used for
@@ -62,16 +62,16 @@ $grid-breakpoints: (
     md: 768px,
     lg: 992px,
     xl: 1200px
-) !default;
+);
 
 // Set the maximum width for the container. There is a class
 // modifier available to disable the maximum width in case you don’t
 // need it. See the official documentation for details.
-$grid-max-width: 1440px !default;
+$grid-max-width: 1440px;
 
 // Set the prefix for all grid related classes. Use this in case you
 // have conflicting class names.
-$grid-classes-prefix: "grid-" !default;
+$grid-classes-prefix: "grid-";
 
 ```
 
