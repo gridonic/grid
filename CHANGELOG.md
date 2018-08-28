@@ -2,10 +2,22 @@ Anything [unreleased] yet?
 
 <br>
 
+# [0.5.0]
+###### 2018-08-28
+
+Can I just have a little piece of it? 🍰
+
+###### Fixed
+- If the grid container was used with `-no-outer` it could potentially overflow. ([4d55dd1])
+
+###### Changed
+- Allow importing of functions and mixins in a more comfortable way.  
+  For example: `@import "~@gridonic/grid/mixins";` or `@import "~@gridonic/grid/functions/grid-column-width";` ([79886d2])
+
 # [0.4.0]
 ###### 2018-07-16
 
-Just a little bit more flexing please. 🌱
+Just a little bit more flexibility please. 🌱
 
 ###### Added
 - Allow multiple values (lists) for `gutter-width` and `outer-margin` to support responsive behaviour. ([966ab71]) 
@@ -44,7 +56,8 @@ It’s all about containers. 🚚
 First (un)official silent release! 😎
 
 
-[unreleased]: https://github.com/gridonic/grid/compare/0.4.0...HEAD
+[unreleased]: https://github.com/gridonic/grid/compare/0.5.0...HEAD
+[0.5.0]: https://github.com/gridonic/grid/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/gridonic/grid/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/gridonic/grid/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/gridonic/grid/compare/0.1.0...0.2.0
@@ -58,3 +71,5 @@ First (un)official silent release! 😎
 [5d3f578]: https://github.com/gridonic/grid/commit/5d3f578
 [3b968ca]: https://github.com/gridonic/grid/commit/3b968ca
 [966ab71]: https://github.com/gridonic/grid/commit/966ab71
+[79886d2]: https://github.com/gridonic/grid/commit/79886d2
+[4d55dd1]: https://github.com/gridonic/grid/commit/4d55dd1
