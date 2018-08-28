@@ -1,0 +1,8 @@
+/// Returns the appropriate gutter width for a given or not given breakpoint.
+@function grid-gutter-width($name: null) {
+    @return grid-configuration-at(
+        $name,
+        $grid-gutter-width,
+        $grid-breakpoints
+    );
+}

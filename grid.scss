@@ -1,11 +1,9 @@
 /*! {{ name }} v{{ version }} */
 
-// Import grid functions/mixins.
-@import "src/functions";
-@import "src/variables";
-@import "src/grid-breakpoint";
-@import "src/grid-gutter-width";
-@import "src/grid-outer-margin";
+// Import grid functions, mixins and settings.
+@import "functions";
+@import "mixins";
+@import "variables";
 
 .#{$grid-classes-prefix}container {
     @include grid-outer-margin;

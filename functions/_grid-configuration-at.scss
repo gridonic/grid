@@ -26,26 +26,3 @@
     // return the requested value, otherwise null.
     @return if($index <= length($option), nth($option, $index), null);
 }
-
-/// Returns the total width for a given column.
-@function grid-column-width($i) {
-    @return 100% / $grid-columns * $i;
-}
-
-/// Returns the appropriate outer margin for a given or not given breakpoint.
-@function grid-outer-margin($name: null) {
-    @return grid-configuration-at(
-        $name,
-        $grid-outer-margin,
-        $grid-breakpoints
-    );
-}
-
-/// Returns the appropriate gutter width for a given or not given breakpoint.
-@function grid-gutter-width($name: null) {
-    @return grid-configuration-at(
-        $name,
-        $grid-gutter-width,
-        $grid-breakpoints
-    );
-}

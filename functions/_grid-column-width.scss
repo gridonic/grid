@@ -1,0 +1,4 @@
+/// Returns the total width for a given column.
+@function grid-column-width($i) {
+    @return 100% / $grid-columns * $i;
+}

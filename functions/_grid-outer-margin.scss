@@ -1,0 +1,8 @@
+/// Returns the appropriate outer margin for a given or not given breakpoint.
+@function grid-outer-margin($name: null) {
+    @return grid-configuration-at(
+        $name,
+        $grid-outer-margin,
+        $grid-breakpoints
+    );
+}
