@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// Base styles.
+// -----------------------------------------------------------------------------
+:root {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: currentColor;
+    display: inline-block;
+    text-decoration-skip: ink;
+}
+
+body {
+    margin: 0;
+}
+
+hr {
+    background: currentColor;
+    border: none;
+    height: 1px;
+}

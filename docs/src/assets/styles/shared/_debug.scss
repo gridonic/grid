@@ -1,0 +1,51 @@
+.debug-vertical-rhythm {
+    position: relative;
+
+    &::after {
+        background-color: transparent;
+        background-image: linear-gradient(transparent 50%, rgba(#37f, 0.25) 0%);
+        background-repeat: repeat;
+        background-size: 100% 1lh;
+        content: "";
+        min-height: 100%;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: $z-debug;
+    }
+}
+
+.debug-breakpoints {
+    position: relative;
+
+    &::after {
+        background-color: #37f;
+        bottom: 0;
+        color: #fff;
+        font-family: monospace;
+        font-size: 0.75rem;
+        line-height: 1lh;
+        padding: 0.5lh 1rem;
+        position: fixed;
+        right: 0;
+        white-space: pre-wrap;
+        z-index: $z-debug;
+
+        @each $name, $width in $breakpoints {
+            @include media(">=#{$width}") {
+                content: "breakpoint: #{$name} (#{$width})";
+            }
+        }
+    }
+}
+
+.debug-box-model {
+    &,
+    & *,
+    & *::after,
+    & *::before {
+        outline: 1px solid rgba(#f33, 0.5);
+    }
+}

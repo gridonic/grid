@@ -1,0 +1,8 @@
+# http://browserl.ist/
+> 0.5%
+
+# Ignore Internet Explorer
+not Explorer >= 0
+
+# Ignore dead browsers
+not dead

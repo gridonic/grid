@@ -1,0 +1,49 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "Interactive @gridonic/grid documentation",
+  "main": "main.js",
+  "config": {
+    "source": "./src",
+    "destination": "./public/assets",
+    "public": "/assets"
+  },
+  "scripts": {
+    "dev": "poi --env dev",
+    "build": "poi build"
+  },
+  "author": "Gridonic <hello@gridonic.ch>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gridonic/grid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gridonic/grid/issues"
+  },
+  "homepage": "https://github.com/gridonic/grid",
+  "devDependencies": {
+    "@poi/plugin-eslint": "^10.0.2",
+    "autoprefixer": "^9.1.3",
+    "babel-eslint": "^9.0.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "fast-async": "^6.3.8",
+    "node-sass": "^4.9.3",
+    "poi": "^10.2.10",
+    "postcss-lh": "^2.0.2",
+    "postcss-normalize": "^6.0.0",
+    "postcss-replace": "^1.0.3",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^7.1.0"
+  },
+  "dependencies": {
+    "family.scss": "^1.0.8",
+    "include-media": "^1.4.9",
+    "sass.js": "^0.10.10",
+    "vue": "^2.5.17"
+  }
+}

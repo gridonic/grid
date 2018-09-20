@@ -1,0 +1,9 @@
+$breakpoints: (
+    sm: 320px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1440px
+) !default;
+
+// @see https://github.com/eduardoboucas/include-media/issues/14
+$unit-intervals: ("px": 1, "em": 0.065, "rem": 0.0625) !default;

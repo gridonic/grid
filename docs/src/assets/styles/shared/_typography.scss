@@ -1,0 +1,45 @@
+:root {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+}
+
+body {
+    line-height: 1lh;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-family: $base-headline-family;
+    font-weight: bold;
+    margin: 0;
+    text-rendering: $base-headline-rendering;
+}
+
+h1, .h1 {
+    font-size: 2.25rem;
+    line-height: 2lh;
+}
+
+h2, .h2 {
+    font-size: 2rem;
+    line-height: 2lh;
+}
+
+h3, .h3 {
+    font-size: 1.5rem;
+    line-height: 1.5lh;
+}
+
+h4, .h4 {
+    font-size: 1.25rem;
+    line-height: 1.25lh;
+}
+
+h5, .h5 {
+    font-size: 1.125rem;
+    line-height: 1lh;
+}

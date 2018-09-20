@@ -1,0 +1,30 @@
+// Base font family.
+$base-font-family: sans-serif !default;
+
+// Base font size. Will be used in :root as font-size.
+$base-font-size: 16px !default;
+
+// Base headline font family.
+$base-headline-family: serif !default;
+
+// Base headline text rendering.
+// @see https://developer.mozilla.org/en/docs/Web/CSS/text-rendering
+$base-headline-rendering: optimizeLegibility !default;
+
+// Base line-height, also represents the vertical-base unit.
+$base-line-height: 1.375rem !default;
+
+// Base quote font family.
+$base-quote-family: Menlo, Consolas, DejaVu Sans Mono, monospace !default;
+
+// @see https://en.wikipedia.org/wiki/Human_processor_model
+$base-transition-duration: 300ms;
+
+// @see https://easings.net/de#easeInOutExpo
+$base-transition-timing: cubic-bezier(1, 0, 0, 1);
+
+// Base border radius.
+$base-border-radius: 3px;
+
+// Base padding.
+$base-padding: 1rem;
